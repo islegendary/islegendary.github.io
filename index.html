@@ -96,12 +96,11 @@
 			<header>
 			<h1>This is a Page Sub Title</h1>
 			</header>
-			<button id="addToCartButton">Purchase</button>
+			<button id="Purchase">Purchase</button>
 			<script type="text/javascript">
-			  $('#$addToCartButton').click(function() {
-				fbq('track', 'Purchase', {currency: "USD", value: 30.00}),
-				fbq(test_event_code, TEST14295);
-			  });
+			 analytics.track("Botton Clicked", {
+				 name: "Purchase"
+			 })
 			</script>
 			<p>Some content...</p>
 	
