@@ -55,9 +55,11 @@
 		}}();
 	  </script>
 	  <script>
-	  const queryString = window.location.search;
+	  const queryString = window.location.search; const urlParamCordial = new URLSearchParams(queryString);
+	  if (urlParamCordial.has('crdl_id')){analytics.track('Email Clicked',{"source": urlParamCordial.get('utm_source'),"crdl": urlParamCordial.get('crdl_id'),"utm_content": urlParamCordial.get('content'),"campaign": urlParamCordial.get('utm_campaign')},{"traits":{"crdl_id": urlParamCordial.get('crdl_id')}});}
 	  console.log('hi');
 	  console.log(queryString);</script>
+	  <script src="https://assets.adobedtm.com/05eee2681a65/d6ffef58657a/launch-8656f4457613-development.min.js" async></script>
 </head>
 
 <!-- If possible, use the body as the container -->
