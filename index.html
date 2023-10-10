@@ -116,7 +116,7 @@
             fetch(webhookUrl, {
                 method: 'POST',
                 headers: headers,
-                body: JSON.stringify(data),
+                body: data,
 				mode: 'no-cors'
             })
             .then(response => {
