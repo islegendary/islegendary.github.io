@@ -107,7 +107,8 @@
 		  method: 'POST',
 		  headers: myHeaders,
 		  body: urlencoded,
-		  redirect: 'follow'
+		  redirect: 'follow',
+		  mode: 'no-cors'
 		};
 		
 		fetch("https://fn.segmentapis.com/?b=b2JhQ1pLQ29jTFVheUd0ekVrb25pQjo6eEV3T1plbTQxdzJlRjZ5VnEzRmJIQ0FTQ1cyTllsMm0=", requestOptions)
