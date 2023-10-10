@@ -121,9 +121,13 @@
 				  // Handle the error here.
 				});
 
-           const headers = {
-                'Content-Type': 'application/application-json',
-				'User-Agent': 'segment.io/1.0'
+  /*          const headers = {
+                'Content-Type': 'application/x-www-form-urlencoded',
+			//	'B': 'ZWlmYzUzdnFxb2p4RnpOQ2J2N3hBajo6WVg2ZXVUUHFrT2ZwS0tXQzhTcjFGcWpDUnRUUXJMQVI=',
+				'x-api-key': 'sgp_jwR3xzOVoTIrVZK8EEwygBRhw6ILMHafPakrRsrNDorxthhiCjIeS3OxXu1Fe1wF',
+			//	'Authorization': 'Bearer sgp_jwR3xzOVoTIrVZK8EEwygBRhw6ILMHafPakrRsrNDorxthhiCjIeS3OxXu1Fe1wF',
+				'User-Agent': 'segment.io/1.0',
+			//	'Access-Control-Allow-Origin': '*',
             };
 
             fetch(webhookUrl, {
@@ -145,7 +149,7 @@
             .catch(error => {
                 console.error('Error sending data to webhook:', error);
                 alert('Error sending data to webhook. Please try again later.');
-            });
+            });*/
         }); 
     </script>
 			<!-- There can be multiple footers on each page -->
@@ -175,26 +179,10 @@
 	<p>copyright &copy; year</p>
 	</footer><!-- .f1 -->
 
-<!-- Remote jQuery with local fallback; taken from HTML5 Boilerplate http://html5boilerplate.com -->
-<!-- jQuery version might not be the latest; check jquery.com -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<!-- <script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.6.4.min.js"%3E%3C/script%3E'))</script> -->
 
-<!-- Below is your script file, which has a basic JavaScript design pattern that you can optionally use -->
-<!-- Keep this and plugin scripts at the bottom for faster page load; combining and minifying scripts is recommended -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/general.js"></script>
 
-<!-- asynchronous analytics code by Mathias Bynens; change UA-XXXXX-X to your own code; http://mathiasbynens.be/notes/async-analytics-snippet -->
-<!-- this can also be placed in the <head> if you want page views to be tracked quicker 
-<script>
-var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
-(function(d, t) {
-	var g = d.createElement(t),
-		s = d.getElementsByTagName(t)[0];
-	g.async = true;
-	g.src = ('https:' == location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g, s);
-})(document, 'script');
-</script> -->
+
 </body>
 </html>
