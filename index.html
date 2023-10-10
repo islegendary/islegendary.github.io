@@ -93,7 +93,40 @@
 			
 			<!-- "em" is used for colloquial-style emphasis -->
 			<p>This is a <em>very</em> colloquial expression.</p>
-			
+			<script>
+				document.getElementById('webhookButton').addEventListener('click', function() {
+					const webhookUrl = 'https://fn.segmentapis.com/?b=ZWlmYzUzdnFxb2p4RnpOQ2J2N3hBajo6WVg2ZXVUUHFrT2ZwS0tXQzhTcjFGcWpDUnRUUXJMQVI=';
+					
+					const data = {
+						firstName: 'Donnie',
+						userId: '920234'
+					};
+		
+					const headers = {
+						'Content-Type': 'application/json'
+					};
+		
+					fetch(webhookUrl, {
+						method: 'POST',
+						headers: headers,
+						body: JSON.stringify(data)
+					})
+					.then(response => {
+						if (!response.ok) {
+							throw new Error('Network response was not ok');
+						}
+						return response.text();
+					})
+					.then(responseText => {
+						console.log('Webhook response:', responseText);
+						alert('Webhook sent successfully!');
+					})
+					.catch(error => {
+						console.error('Error sending data to webhook:', error);
+						alert('Error sending data to webhook. Please try again later.');
+					});
+				});
+			</script>
 			<!-- There can be multiple footers on each page -->
 			<footer>
 			
@@ -106,7 +139,9 @@
 		<section class="hs2">
 		<h1>This is another section</h1>
 		<p>This is some dummy content</p>
-		</section><!-- .hs2 -->
+		</section><
+		<input 
+		!-- .hs2 -->
 
 	</div><!-- .main -->
 
