@@ -97,59 +97,26 @@
 
     <script>
         document.getElementById('webhookButton').addEventListener('click', function() {
-            const webhookUrl = 'https://fn.segmentapis.com/?b=b2JhQ1pLQ29jTFVheUd0ekVrb25pQjo6eEV3T1plbTQxdzJlRjZ5VnEzRmJIQ0FTQ1cyTllsMm0=';
-            
-            const data = {
-                firstName: 'Donnie',
-                userId: '920234'
-            };
-			const options = {
-				method: 'POST',
-				headers: {
-				  'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(data),
-				mode: 'no-cors'
-			  };
-			  
-			  fetch(webhookUrl, options)
-				.then(response => response.json())
-				.then(data => {
-				  // Do something with the response data here.
-				})
-				.catch(error => {
-				  // Handle the error here.
-				});
-
-  /*          const headers = {
-                'Content-Type': 'application/x-www-form-urlencoded',
-			//	'B': 'ZWlmYzUzdnFxb2p4RnpOQ2J2N3hBajo6WVg2ZXVUUHFrT2ZwS0tXQzhTcjFGcWpDUnRUUXJMQVI=',
-				'x-api-key': 'sgp_jwR3xzOVoTIrVZK8EEwygBRhw6ILMHafPakrRsrNDorxthhiCjIeS3OxXu1Fe1wF',
-			//	'Authorization': 'Bearer sgp_jwR3xzOVoTIrVZK8EEwygBRhw6ILMHafPakrRsrNDorxthhiCjIeS3OxXu1Fe1wF',
-				'User-Agent': 'segment.io/1.0',
-			//	'Access-Control-Allow-Origin': '*',
-            };
-
-            fetch(webhookUrl, {
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(data),
-				mode: 'no-cors'
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(responseText => {
-                console.log('Webhook response:', responseText);
-                alert('Webhook sent successfully!');
-            })
-            .catch(error => {
-                console.error('Error sending data to webhook:', error);
-                alert('Error sending data to webhook. Please try again later.');
-            });*/
+			var myHeaders = new Headers();
+			myHeaders.append("Content-Type", "application/json");
+			
+			var raw = JSON.stringify({
+			  "firstName": "Donnie",
+			  "userId": "34234"
+			});
+			
+			var requestOptions = {
+			  method: 'POST',
+			  headers: myHeaders,
+			  body: raw,
+			  redirect: 'follow',
+			  mode: 'no-cors'
+			};
+			
+			fetch("https://fn.segmentapis.com/?b=b2JhQ1pLQ29jTFVheUd0ekVrb25pQjo6eEV3T1plbTQxdzJlRjZ5VnEzRmJIQ0FTQ1cyTllsMm0=", requestOptions)
+			  .then(response => response.text())
+			  .then(result => console.log(result))
+			  .catch(error => console.log('error', error));
         }); 
     </script>
 			<!-- There can be multiple footers on each page -->
